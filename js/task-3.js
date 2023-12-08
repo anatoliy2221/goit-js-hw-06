@@ -1,6 +1,6 @@
 class StringBuilder {
   #value;
-  
+
   constructor(initialValue) {
     this.#value = initialValue;
   }
@@ -10,11 +10,11 @@ class StringBuilder {
   }
 
   padStart(str) {
-    return (this.#value = this.#value + str);
+    return (this.#value = str + this.#value);
   }
 
   padEnd(str) {
-    return (this.#value = str + this.#value);
+    return (this.#value = this.#value + str);
   }
 
   padBoth(str) {
@@ -30,3 +30,4 @@ builder.padEnd("^");
 console.log(builder.getValue()); // "^.^"
 builder.padBoth("=");
 console.log(builder.getValue()); // "=^.^="
+
